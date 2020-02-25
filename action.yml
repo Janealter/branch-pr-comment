@@ -1,0 +1,13 @@
+name: 'PR comment'
+description: 'Send comment to PR associated with branch'
+author: 'Janealter'
+inputs:
+  message:
+    description: 'Comment message text'
+    required: true
+  branch:
+    description: 'Branch associated with PR'
+    required: true
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
