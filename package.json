@@ -1,5 +1,5 @@
 {
-  "name": "pr-comment",
+  "name": "branch-pr-comment",
   "version": "1.0.0",
   "description": "Send comment to PR associated with branch",
   "main": "lib/main.js",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Janealter/pr-comment.git"
+    "url": "git+https://github.com/Janealter/branch-pr-comment.git"
   },
   "keywords": [
     "actions",

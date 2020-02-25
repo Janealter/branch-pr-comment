@@ -7,7 +7,7 @@ Send comment to PR associated with branch.
 ```yml
 steps:
   - name: PR comment
-    uses: Janealter/pr-comment@v1
+    uses: Janealter/branch-pr-comment@v1
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     with:

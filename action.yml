@@ -1,6 +1,9 @@
-name: 'PR comment'
+name: 'Branch PR comment'
 description: 'Send comment to PR associated with branch'
 author: 'Janealter'
+branding:
+  icon: 'message-circle'
+  color: 'purple'
 inputs:
   message:
     description: 'Comment message text'
