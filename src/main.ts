@@ -10,7 +10,10 @@ async function run() {
 
   const octokit = new github.GitHub(process.env.GITHUB_TOKEN);
 
-  const { data: pullRequests } = await octokit.pulls.list();
+  const { data: pullRequests } = await octokit.pulls.list({
+    owner: github.context.repo.owner,
+    repo: github.context.repo.repo,
+  });
 
   const prAssociatedWithBranch = pullRequests.find(
     ({ head: { ref } }) => ref === branch,
@@ -30,5 +33,6 @@ async function run() {
 try {
   run();
 } catch (e) {
+  core.setFailed(e.message);
   throw e;
 }
