@@ -5,6 +5,10 @@ async function run() {
   const message = core.getInput('message');
   const branch = core.getInput('branch');
 
+  if (!message) throw new Error("Required 'message' input");
+
+  if (!branch) throw new Error("Required 'branch' input");
+
   if (!process.env.GITHUB_TOKEN)
     throw new Error('Required Github access token');
 
