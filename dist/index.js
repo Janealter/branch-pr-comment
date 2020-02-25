@@ -3514,6 +3514,10 @@ function run() {
     return __awaiter(this, void 0, void 0, function* () {
         const message = core.getInput('message');
         const branch = core.getInput('branch');
+        if (!message)
+            throw new Error("Required 'message' input");
+        if (!branch)
+            throw new Error("Required 'branch' input");
         if (!process.env.GITHUB_TOKEN)
             throw new Error('Required Github access token');
         const octokit = new github.GitHub(process.env.GITHUB_TOKEN);
